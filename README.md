@@ -48,7 +48,7 @@ Add these lines of code:
 Setup Database locally:
 11) Visit http://localhost/phpmyadmin/
 12) Create new database called `laravel-is-awesome` set charachter set to be `uf8mb4_unicode_ci` (Before last option)
-13) Create a new account for database only.
+13) Create a new account for database only. Host name must be localhost
 14) In .env add correct details. Using commands 
 ```
 php artisan tinker
