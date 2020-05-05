@@ -1,6 +1,6 @@
 # Laravel is Awesome
 
-Laravel is awesome is a application that tries to show the power of Laravel by incomperating more and more difficult tasks.
+Laravel is awesome is a application that tries to show the power of Laravel by incomperating more and more difficult tasks.1
 
 ## Getting Started
 
