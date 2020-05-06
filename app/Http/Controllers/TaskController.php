@@ -12,7 +12,7 @@ class TaskController extends Controller
     {
         $tasks = Task::orderBy('created_at', 'asc')->get();
 
-        return view('todo.todolist', [
+        return view('todo.tasks', [
             'tasks' => $tasks
         ]);
     }
@@ -23,7 +23,7 @@ class TaskController extends Controller
         ]);
         error_log('Function was activated');
         if($validator->fails()) {
-            return redirect('/to-do-list')
+            return redirect('/to-do')
                 ->withInput()
                 ->withErrors($validator);
         }
@@ -32,6 +32,10 @@ class TaskController extends Controller
         $task->name = $request->name;
         $task->save();
 
-        return redirect('/to-do-list');
+        return redirect('/to-do');
+    }
+    public function delete($id) {
+        Task::findOrFail($id)->delete();
+        return redirect('/to-do');
     }
 }

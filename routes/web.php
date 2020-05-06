@@ -20,6 +20,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/to-do-list', 'TaskController@index');
-Route::post('/to-do-listtask', 'TaskController@task');
-//Route::delete('to-do-list/task/{id}', 'TaskController@index');
+Route::get('/to-do', 'TaskController@index');
+Route::post('/to-do/task', 'TaskController@task');
+Route::delete('/to-do/task/{id}', 'TaskController@delete');
