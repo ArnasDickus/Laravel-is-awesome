@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Validator;
 
 class TaskController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $tasks = Task::orderBy('created_at', 'asc')->get();
@@ -21,7 +26,6 @@ class TaskController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:255',
         ]);
-        error_log('Function was activated');
         if($validator->fails()) {
             return redirect('/to-do')
                 ->withInput()

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="card-body">
-        <form action="to-do/task" method="post" class="d-flex justify-content-center">
+        <form action="/to-do/task" method="post" class="d-flex justify-content-center">
         {{ csrf_field() }}
 
             <div class="card" style="width: 18rem;">
