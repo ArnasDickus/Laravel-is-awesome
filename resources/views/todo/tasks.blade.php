@@ -2,10 +2,6 @@
 
 @section('content')
     <div class="card-body">
-        <!-- Display Validation Errors -->
-{{--    @include('common.errors')--}}
-
-    <!-- New Task Form -->
         <form action="to-do/task" method="post" class="d-flex justify-content-center">
         {{ csrf_field() }}
 
