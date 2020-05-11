@@ -37,9 +37,9 @@
                                     <td class="table-text">
                                         <div>{{ $task->name }}</div>
                                     </td>
-                                    
+
                                     <td>
-                                        <form action="/to-do/task/{{ $task->id }}" method="POST">
+                                        <form action="{{action('TaskController@destroy', $task->id)}}" method="POST">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
 
