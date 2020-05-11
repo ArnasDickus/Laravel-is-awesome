@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="card-body">
-        <form action="/to-do/task" method="post" class="d-flex justify-content-center">
+        <form action="{{action('TaskController@store')}}" method="post" class="d-flex justify-content-center">
         {{ csrf_field() }}
 
             <div class="card" style="width: 18rem;">
@@ -37,7 +37,7 @@
                                     <td class="table-text">
                                         <div>{{ $task->name }}</div>
                                     </td>
-
+                                    
                                     <td>
                                         <form action="/to-do/task/{{ $task->id }}" method="POST">
                                             {{ csrf_field() }}
